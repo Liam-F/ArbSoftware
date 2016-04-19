@@ -1,0 +1,58 @@
+.all-buttons {
+	background-color: #cb2227;
+	color: #ffffff;
+}
+
+.well {
+	background-color: #222222;
+	color: #9d9d9d;
+}
+
+.welcome-user {
+	margin-top: 15px;
+	margin-right: 40px;
+	font-size: 16px;
+	color: #9d9d9d;
+}
+
+.center-text {
+	text-align:center;
+}
+
+.logout {
+	margin-right: 40px;
+}
+
+#logo img {
+	width:100%;
+}
+
+#output {
+	margin-top: 20px;
+}
+
+
+
+iframe {
+	margin: 0 auto;
+}
+
+.img-height img {
+	height: 250px;
+	width: 100%;
+}
+
+thead {
+	background: #222222;
+	color: white;
+}
+
+#video-container {
+	width: 50%;
+}
+
+table {
+	word-wrap: break-word;
+}
+
+
