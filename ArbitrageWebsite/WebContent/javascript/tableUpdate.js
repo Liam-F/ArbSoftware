@@ -9,5 +9,5 @@ $(document).ready(function() {
 		});
 
 	}, 5000);
-	
+
 });

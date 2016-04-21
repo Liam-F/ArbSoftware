@@ -31,8 +31,6 @@
 	margin-top: 20px;
 }
 
-
-
 iframe {
 	margin: 0 auto;
 }
@@ -55,4 +53,6 @@ table {
 	word-wrap: break-word;
 }
 
-
+myDiv {
+	width: 100%;
+}
