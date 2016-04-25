@@ -24,8 +24,8 @@ In this Readme I will have a list of what this repository contains along with in
 - [ArbitrageWebsite.war](/ArbitrageWebsite.war) is the .war file to be deployed to your tomcat server so you can run the website.
 - [arbitrageScraper.jar](/arbitrageScraper.jar) is an executable jar file that you can run in order to find arbitrage opportunities.
 - [umlProject.png](/umlProject.png) is a uml diagram of the ArbitrageScraper application.
-- [ArbitrageTradingSite.sql](/ArbitrageTradingSite.sql) is a file that contains how the database was setup. Although I have the database for both applications hosted on godaddy.com so you should not need to run this file to use the application.
-- [ArbitrageTable.png](/ArbitrageTable.png) is a screenshot of the table on the website when it has found a few arbitrage opportunities.
+- [ArbitrageTradingSite.sql](/ArbitrageTradingSite.sql) is a file that contains how the database was setup. However, I have the database for both applications hosted on godaddy.com so you should not need to run this file to use the application.
+- [ArbitrageTable.png](/ArbitrageTable.png) is a screenshot of the table displayed on the website when it has found a few arbitrage opportunities.
 - [project.pdf](/project.pdf) is the documentation for the project that was submitted to moodle.
 
 ---
@@ -38,7 +38,7 @@ This project contains some prerequisites in order to run.
 
 ***
 
-Once you have both of the on your machine you can get to running the project.
+Once you have both of them on your machine you can get to running the project.
 
 1. Download this repository.
 
@@ -58,8 +58,9 @@ This is needed in order for the website app to connect to the database.
 5. Once thats done you should be able to go to http://localhost:8080/ArbitrageWebsite/Controller and see the website, but it wont be finding arbitrage opportunities yet.
 
 6. Open another cmd prompt or terminal and navigate to the downloaded folder. Run this command to start the scraper.
-  java -jar arbitrageScraper.jar this will start the scraper and find arb opportunities.
+  - java -jar arbitrageScraper.jar 
+ This will start the scraper and find arb opportunities.
 
 7. Go back to the browser and go to http://localhost:8080/ArbitrageWebsite/Controller then sign up and go to the trades page and there you have it.
 
-Sometimes the trades page of the website will have no data even while the scraper is running this is common as it might not find arb bets every time it scrapes the pages. During the morning or late afternoon is the time it finds the most opportunities, it barely finds any at night time.
+Sometimes the trades page of the website will have no data even while the scraper is running, this is common as it might not find arb bets every time it scrapes the pages. During the morning or late afternoon is the time it finds the most opportunities, it rarely finds any at night time.
