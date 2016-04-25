@@ -2,6 +2,8 @@ package clarke.sw.scraper;
 
 public class Player {
 
+	// Player class to create players. From which the matches objects will be created.
+	
 	private String playerName;
 	private double odds;
 	private String playerWebsite;

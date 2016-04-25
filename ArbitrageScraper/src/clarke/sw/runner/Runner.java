@@ -17,6 +17,7 @@ public class Runner extends TimerTask {
 //		displayResults();
 	}
 
+	// When ran display arbs to the terminal or cmd prompt.
 	private void displayResults() {
 		System.out.println();
 
@@ -30,20 +31,21 @@ public class Runner extends TimerTask {
 		System.out.println(arbData.size());
 	}
 
+	// Run method to be invoked by the main to get the program running.
 	public void run() {
 		arbData = new CalculateArbs().getArbs();
-//		try {
-//			new Database(arbData);
-//		} catch (Exception e) {
-//			e.printStackTrace();
-//		}
+		try {
+			new Database(arbData);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 		displayResults();
 	}
 
 	public static void main(String[] args) {
-
+		// Rerun every 15 seconds to keep finding new arbitrage opportunities.
 		Timer timer = new Timer();
-		timer.schedule(new Runner(), 0, 1000*20);
+		timer.schedule(new Runner(), 0, 1000*15);
 		
 	}
 

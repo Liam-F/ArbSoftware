@@ -2,6 +2,8 @@ package clarke.sw.scraper;
 
 public class Matches {
 
+	// Matches class to create matches objects
+	
 	private String player1;
 	private double p1Odds;
 	private String player1Website;

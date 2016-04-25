@@ -32,6 +32,8 @@ public class BetfairTennis extends MakeMatches implements RetrieveOdds, Callable
 	private String page = "https://www.betfair.com/sport/tennis";
 	private RoundDecimal rd = new RoundDecimal();
 
+	// Get connection to webpage to scrape
+
 	public Document getConnection(String url)  throws Exception {
 //		try {
 			Connection connection = Jsoup.connect(url);
@@ -44,6 +46,7 @@ public class BetfairTennis extends MakeMatches implements RetrieveOdds, Callable
 //		}
 	}
 
+	// Parse the page that contains the odds to get the name of the contenders and their odds
 	public LinkedList<Player> getOdds(Document doc) {
 		@SuppressWarnings("unused")
 		Elements els = doc.select("#yui_3_10_3_1_1437053038602_19846").remove();
@@ -84,6 +87,7 @@ public class BetfairTennis extends MakeMatches implements RetrieveOdds, Callable
 		return betfairPlayers;
 	}
 
+	// Call method needed to start the thread
 	public LinkedList<Matches> call() {
 		try {
 			Document doc = getConnection(page);
@@ -96,6 +100,8 @@ public class BetfairTennis extends MakeMatches implements RetrieveOdds, Callable
 		}
 	}
 	
+	// Test main method to see if it was finding the right names and odds
+
 //	public static void main(String[] args) {
 //		Betfair bf = new Betfair();
 //		Document doc = bf.getConnection("https://www.betfair.com/sport/tennis");

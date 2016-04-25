@@ -32,6 +32,7 @@ public class CoralSportsSnooker extends MakeMatches implements RetrieveOdds, Cal
 	private RoundDecimal rd = new RoundDecimal();
 	
 	
+	// Get connection to webpage to scrape
 	public Document getConnection(String url) throws Exception {
 		Connection connection = Jsoup.connect(url);
 		connection.timeout(15000);
@@ -39,6 +40,7 @@ public class CoralSportsSnooker extends MakeMatches implements RetrieveOdds, Cal
 		return document;
 	} 
 	
+	// Parse the page that contains the odds to get the name of the contenders and their odds
 	public LinkedList<Player> getOdds(Document doc) {
 		
 		Elements e = doc.select("gp-widget-coral-widget-news");
@@ -77,6 +79,7 @@ public class CoralSportsSnooker extends MakeMatches implements RetrieveOdds, Cal
 		return coralSportsPlayers;
 	}
 	
+	// Call method needed to start the thread
 	public LinkedList<Matches> call() throws Exception {
 		try {
 			Document doc = getConnection(page);
@@ -89,6 +92,9 @@ public class CoralSportsSnooker extends MakeMatches implements RetrieveOdds, Cal
 		}
 	}
 	
+	
+	// Test main method to see if it was finding the right names and odds
+
 	// public static void main(String[] args) throws Exception {
 	// CoralSportsSnooker cs = new CoralSportsSnooker();
 	//

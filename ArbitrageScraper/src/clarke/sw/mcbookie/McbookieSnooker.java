@@ -24,7 +24,7 @@ public class McbookieSnooker extends MakeMatches implements RetrieveOdds, Callab
 	private String temp;
 	private String[] tmp;
 	private String website = "Mcbookie";
-	private String page = "http://www.mcbookie.com/sports/en/snooker/coupons/364700/269086410/0/4429/0/MPE/0/0/0/0/1";
+	private String page = "http://www.mcbookie.com/sports/en/snooker";
 	private LinkedList<String> playersList = new LinkedList<>();
 	private LinkedList<Double> oddsList = new LinkedList<>();
 	private LinkedList<Player> mcbookiePlayers = new LinkedList<>();
@@ -32,6 +32,7 @@ public class McbookieSnooker extends MakeMatches implements RetrieveOdds, Callab
 	private LinkedList<Matches> matches;
 	private RoundDecimal rd = new RoundDecimal();
 	
+	// Get connection to webpage to scrape
 	public Document getConnection(String url) throws Exception {
 		Connection connection = Jsoup.connect(url);
 		connection.timeout(15000);
@@ -39,6 +40,7 @@ public class McbookieSnooker extends MakeMatches implements RetrieveOdds, Callab
 		return document;
 	}
 
+	// Parse the page that contains the odds to get the name of the contenders and their odds
 	public LinkedList<Player> getOdds(Document doc) {
 
 		for(Element e : doc.select(".bet_boost_coupon")){
@@ -71,6 +73,7 @@ public class McbookieSnooker extends MakeMatches implements RetrieveOdds, Callab
 		return mcbookiePlayers;
 	}
 
+	// Call method needed to start the thread
 	public LinkedList<Matches> call() {
 		try {
 			Document doc = getConnection(page);
@@ -83,6 +86,8 @@ public class McbookieSnooker extends MakeMatches implements RetrieveOdds, Callab
 		}
 	}
 	
+	// Test main method to see if it was finding the right names and odds
+
 //	public static void main(String[] args) throws Exception {
 //		McbookieTennis cs = new McbookieTennis();
 //		Document doc = cs.getConnection("http://www.mcbookie.com/sports/en/snooker/coupons/364700/269086410/0/4429/0/MPE/0/0/0/0/1");

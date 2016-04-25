@@ -59,9 +59,15 @@ public class Controller extends HttpServlet {
 		request.setAttribute("validationMessage", "");
 		request.setAttribute("creationMessage", "");
 
+		session = request.getSession();
+		
+		if(request.getParameter("userAmt") != null){
+			session.setAttribute("userSetAmt", request.getParameter("userAmt"));
+		}
+		
 		// Get the action parameter
 		String action = request.getParameter("action");
-
+		
 		if (action == null || !actionMap.containsKey(action))
 			action = "home";
 		else if (action.equals("logout")) {

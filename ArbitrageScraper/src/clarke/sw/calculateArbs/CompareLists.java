@@ -7,6 +7,7 @@ import clarke.sw.scraper.Sports;
 
 public class CompareLists extends CompareNames {
 
+	// Compare the lists of matches to see if one list contains better odds then the opposing list
 	public LinkedList<Matches> compareLists(LinkedList<Matches> bestOddsMatches, LinkedList<Matches> matchesList, Sports s) {
 		try {
 			for (int i = 0; i < bestOddsMatches.size(); i++) {

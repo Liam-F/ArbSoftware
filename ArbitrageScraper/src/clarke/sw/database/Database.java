@@ -11,6 +11,7 @@ import clarke.sw.scraper.Sports;
 
 public class Database {
 
+	// Database connection details.
 	private LinkedList<ArbData> listOfArbs;
 	private Connection conn;
 	private final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
@@ -26,6 +27,7 @@ public class Database {
 		disconnect();
 	}
 
+	// Connect to the database.
 	public void connect() {
 		if (conn != null)
 			return;
@@ -43,7 +45,8 @@ public class Database {
 		}
 
 	}
-
+	
+	// Disconnect fromt he database.
 	public void disconnect() {
 		if (conn != null) {
 			try {
@@ -54,6 +57,7 @@ public class Database {
 		}
 	}
 
+	// Insert to the database using a prepared statement so sql injections cant happen.
 	public void insertToDb() throws Exception {
 		System.out.println("inserting");
 
@@ -95,6 +99,7 @@ public class Database {
 		insertStmt.close();
 	}
 	
+	// Delete data from the database.
 	public void deleteFromDb() throws SQLException{
 		System.out.println("Deleting");
 		
@@ -107,6 +112,8 @@ public class Database {
 		deleteStmt.close();
 	}
 
+	
+	// Test the databse.
 //	public static void main(String[] args) {
 //
 //		LinkedList<ArbData> ad = new LinkedList<>();

@@ -2,6 +2,7 @@ package clarke.sw.scraper;
 
 import java.util.LinkedList;
 
+// Make matches will be extended by all classes that have to scrape a webpage to make the matches.
 public abstract class MakeMatches {
 	private LinkedList<Matches> matches = new LinkedList<>();
 

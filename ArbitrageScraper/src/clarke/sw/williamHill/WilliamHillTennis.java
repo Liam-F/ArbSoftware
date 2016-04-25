@@ -31,6 +31,7 @@ public class WilliamHillTennis extends MakeMatches implements RetrieveOdds, Call
 	private LinkedList<Matches> matches;
 	private RoundDecimal rd = new RoundDecimal();
 
+	// Get connection to webpage to scrape
 	public Document getConnection(String url) throws Exception {
 		// try {
 		Connection connection = Jsoup.connect(url);
@@ -44,12 +45,16 @@ public class WilliamHillTennis extends MakeMatches implements RetrieveOdds, Call
 		// }
 	}
 
+	// Parse the page that contains the odds to get the name of the contenders and their odds
 	public LinkedList<Player> getOdds(Document doc) {
 		Elements rem = doc.select("table");
 		for (int i = 0; i < rem.size(); i++) {
 			if (rem.get(i).text().contains("Correct Score"))
 				rem.remove(i);
 		}
+		
+		// Use jsoup to find where the names and the odds are in the document scraped
+		// Add the names to a list of names and the odds to a list of odds.
 		playersNames = rem.select("table[class=tableData]").select("tbody").select("tr[class=rowOdd]").select("tr")
 				.select("td").select(".CentrePad");
 		playersOdds = rem.select("table[class=tableData]").select("tbody").select("tr[class=rowOdd]").select("tr")
@@ -69,8 +74,11 @@ public class WilliamHillTennis extends MakeMatches implements RetrieveOdds, Call
 			playersList.add(tmp[1].toLowerCase().trim());
 		}
 		for (int i = 0; i < playersOdds.size(); i++) {
+			// If the odds are displayed in decimal format its fine but if they are displayed 
+			// In fractions they have to be converted to decimals.
 			oddsList.add(rd.convertToDecimal(playersOdds.get(i).text()) + 1);
 		}
+		// Remove any player and corrosponding odd where the name contains a /
 		for (int i = playersList.size() - 1; i >= 0; i--) {
 			if (playersList.get(i).contains("/")) {
 				playersList.remove(i);
@@ -78,6 +86,7 @@ public class WilliamHillTennis extends MakeMatches implements RetrieveOdds, Call
 			}
 		}
 		williamHillPlayers.clear();
+		// Create a list of players
 		for (int i = 0; i < playersList.size(); i++) {
 			williamHillPlayers.add(new Player(playersList.get(i), oddsList.get(i), website));
 		}
@@ -86,6 +95,7 @@ public class WilliamHillTennis extends MakeMatches implements RetrieveOdds, Call
 		return williamHillPlayers;
 	}
 
+	// Call method needed to start the thread
 	public LinkedList<Matches> call() {
 		try {
 			Document doc = getConnection(page);
@@ -97,6 +107,8 @@ public class WilliamHillTennis extends MakeMatches implements RetrieveOdds, Call
 			return null;
 		}
 	}
+
+	// Test main method to see if it was finding the right names and odds
 
 	// public static void main(String[] args) {
 	// WilliamHill wh = new WilliamHill();

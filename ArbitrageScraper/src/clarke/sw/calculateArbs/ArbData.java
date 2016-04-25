@@ -2,6 +2,7 @@ package clarke.sw.calculateArbs;
 
 import clarke.sw.scraper.Sports;;
 
+// Class to create object that holds the information needed to place an arbitrage bet
 public class ArbData {
 	private double arbPercentage;
 	private double profit;

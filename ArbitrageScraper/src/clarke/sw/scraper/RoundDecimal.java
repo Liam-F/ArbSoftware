@@ -1,6 +1,9 @@
 package clarke.sw.scraper;
 
 public class RoundDecimal {
+	
+	// RoundDecimal will be used to round the profit and the bets to be placed to make it easier to read.
+	
 	public double round(double value, int places) {
 		try {
 			if (places < 0)

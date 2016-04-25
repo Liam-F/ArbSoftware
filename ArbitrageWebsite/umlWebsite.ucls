@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<class-diagram version="1.1.9" icons="true" automaticImage="PNG" always-add-relationships="false" generalizations="true" 
+  realizations="true" associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
+  <package id="1" language="java" name="clarke.sw.beans" project="ArbitrageWebsite" 
+    file="/ArbitrageWebsite/src/clarke/sw/beans" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="134" x="201" y="7"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="2" language="java" name="clarke.sw.account.Account" project="ArbitrageWebsite" 
+    file="/ArbitrageWebsite/src/clarke/sw/account/Account.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="152" width="176" x="375" y="7"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="3" language="java" name="clarke.sw.controller" project="ArbitrageWebsite" 
+    file="/ArbitrageWebsite/src/clarke/sw/controller" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="158" x="591" y="7"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <class id="4" language="java" name="clarke.sw.controller.Controller" project="ArbitrageWebsite" 
+    file="/ArbitrageWebsite/src/clarke/sw/controller/Controller.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="206" width="323" x="789" y="7"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <class id="5" language="java" name="clarke.sw.beans.User" project="ArbitrageWebsite" 
+    file="/ArbitrageWebsite/src/clarke/sw/beans/User.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="260" width="162" x="1152" y="7"/>    
+    <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+      sort-features="false" accessors="true" visibility="true">      
+      <attributes public="true" package="true" protected="true" private="true" static="true"/>      
+      <operations public="true" package="true" protected="true" private="true" static="true"/>    
+    </display>  
+  </class>  
+  <package id="6" language="java" name="clarke.sw.account" project="ArbitrageWebsite" 
+    file="/ArbitrageWebsite/src/clarke/sw/account" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="50" width="148" x="1354" y="7"/>    
+    <display autosize="true" stereotype="true" sort-features="false" accessors="true"/>  
+  </package>  
+  <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
+    sort-features="false" accessors="true" visibility="true">    
+    <attributes public="true" package="true" protected="true" private="true" static="true"/>    
+    <operations public="true" package="true" protected="true" private="true" static="true"/>  
+  </classifier-display>  
+  <association-display labels="true" multiplicity="true"/>
+</class-diagram>

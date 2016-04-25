@@ -32,6 +32,7 @@ public class BetfairSnooker extends MakeMatches implements RetrieveOdds, Callabl
 	private String page = "https://www.betfair.com/sport/snooker";
 	private RoundDecimal rd = new RoundDecimal();
 	
+	// Get connection to webpage to scrape
 	public Document getConnection(String url) throws Exception {
 		Connection connection = Jsoup.connect(url);
 		connection.timeout(15000);
@@ -39,13 +40,13 @@ public class BetfairSnooker extends MakeMatches implements RetrieveOdds, Callabl
 		return document;
 	}
 	
+	// Parse the page that contains the odds to get the name of the contenders and their odds
 	public LinkedList<Player> getOdds(Document doc) {
 		playersNames = doc.getElementsByClass("home-team-name");
 		players2Names = doc.getElementsByClass("away-team-name");
 		playersOdds = doc.getElementsByClass("ui-runner-price");
 
-		for (int i = 0; i < playersNames.size(); i++) { // loop through all the
-														// players
+		for (int i = 0; i < playersNames.size(); i++) { // loop through all the players
 			if (playersNames.get(i).text().contains(",") && players2Names.get(i).text().contains(",")) {
 				tmp = playersNames.get(i).text().split(",");
 				temp = tmp[1] + " " + tmp[0];
@@ -76,6 +77,7 @@ public class BetfairSnooker extends MakeMatches implements RetrieveOdds, Callabl
 		return betfairPlayers;
 	}
 	
+	// Call method needed to start the thread
 	public LinkedList<Matches> call() throws Exception {
 		try {
 			Document doc = getConnection(page);
@@ -87,6 +89,9 @@ public class BetfairSnooker extends MakeMatches implements RetrieveOdds, Callabl
 			return null;
 		}
 	}
+	
+	
+	// Test main method to see if it was finding the right names and odds
 	
 	// public static void main(String[] args) throws Exception {
 	// BetfairSnooker bf = new BetfairSnooker();

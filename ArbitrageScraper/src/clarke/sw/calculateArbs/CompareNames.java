@@ -6,6 +6,8 @@ import clarke.sw.scraper.Matches;
 
 public class CompareNames {
 
+	// Class to compare names of each contender because different sites display the names differently
+	// Levenshtein Distance used to compute a percentage up to %100 of how close the names are found on rosetta code - https://rosettacode.org/wiki/Levenshtein_distance
 	public void compareNames(LinkedList<Matches> list1,
 			LinkedList<Matches> list2) {
 		try {
