@@ -59,8 +59,8 @@ This is needed in order for the website app to connect to the database.
 
 6. Open another cmd prompt or terminal and navigate to the downloaded folder. Run this command to start the scraper.
   - java -jar arbitrageScraper.jar 
- 
-This will start the scraper and find arb opportunities.
+  
+ This will start the scraper and find arb opportunities.
 
 7. Go back to the browser and go to http://localhost:8080/ArbitrageWebsite/Controller then sign up and go to the trades page and there you have it.
 
