@@ -36,6 +36,7 @@ This project contains some prerequisites in order to run.
 
 2. Apache tomcat webserver - [Install Apache tomcat](https://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html) - this is needed in order to deploy the .war file and view the website.
 
+***
 
 Once you have both of the on your machine you can get to running the project.
 
