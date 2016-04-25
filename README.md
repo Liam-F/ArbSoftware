@@ -32,9 +32,9 @@ In this Readme I will have a list of what this repository contains along with in
 
 ###Running the project
 This project contains some prerequisites in order to run.
-1. Java [Install java](http://docs.oracle.com/javase/7/docs/webnotes/install/) - this is needed to run both application files
+- Java [Install java](http://docs.oracle.com/javase/7/docs/webnotes/install/) - this is needed to run both application files
 
-2. Apache tomcat webserver - [Install Apache tomcat](https://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html) - this is needed in order to deploy the .war file and view the website.
+- Apache tomcat webserver - [Install Apache tomcat](https://www.ntu.edu.sg/home/ehchua/programming/howto/Tomcat_HowTo.html) - this is needed in order to deploy the .war file and view the website.
 
 ***
 
