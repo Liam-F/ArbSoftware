@@ -20,7 +20,7 @@ In this Readme I will have a list of what this repository contains along with in
 - [ArbitrageScraper](/ArbitrageScraper) this folder contains all the source code for the scraper and the calculations.
 - [ArbitrageWebsite](/ArbitrageWebsite) this folder contains all the source code for the website.
 - [projectMovie.mov](/projectMovie.mov) is a 2 minute demonstration of the project being used.
-- [accounts.xlsx](/accounts.xlsx) file is an excel sheet that shows all the bets myself and my friends placed and the profit we made from testing the application after getting investment.
+- [accounts.xlsx](/accounts.xlsx) file is an excel sheet that shows all the bets my friends and I placed along with the profit we made from testing the application after receiving investment.
 - [ArbitrageWebsite.war](/ArbitrageWebsite.war) is the .war file to be deployed to your tomcat server so you can run the website.
 - [arbitrageScraper.jar](/arbitrageScraper.jar) is an executable jar file that you can run in order to find arbitrage opportunities.
 - [umlProject.png](/umlProject.png) is a uml diagram of the ArbitrageScraper application.
