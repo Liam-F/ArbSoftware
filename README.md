@@ -19,15 +19,14 @@ In this Readme I will have a list of what this repository contains along with in
 ###What is contains
 - [ArbitrageScraper](/ArbitrageScraper) this folder contains all the source code for the scraper and the calculations.
 - [ArbitrageWebsite](/ArbitrageWebsite) this folder contains all the source code for the website.
-- projectMovie is a 2 minute demonstration of the project being used.
-- accounts.xlsx file is an excel sheet that shows all the bets myself and my friends placed and the profit we made from testing the application after getting investment.
-- ArbitrageWebsite.war is the .war file to be deployed to your tomcat server so you can run the website.
-- ArbitrageScraper.jar is an executable jar file that you can run in order to find arbitrage opportunities.
-- umlProject is a uml diagram of the ArbitrageScraper application.
-- ArbitrageTradingSite.sql is a file that contains how the database was setup. Although I have the database for both applications 
-hosted on godaddy.com so you should not need to run this file to use the application.
-- ArbitrageTable.png is a screenshot of the table on the website when it has found a few arbitrage opportunities.
-- project.pdf is the documentation for the project that was submitted to moodle.
+- [projectMovie.mov](/projectMovie.mov) is a 2 minute demonstration of the project being used.
+- [accounts.xlsx](/accounts.xlsx) file is an excel sheet that shows all the bets myself and my friends placed and the profit we made from testing the application after getting investment.
+- [ArbitrageWebsite.war](/ArbitrageWebsite.war) is the .war file to be deployed to your tomcat server so you can run the website.
+- [ArbitrageScraper.jar](/ArbitrageScraper.jar) is an executable jar file that you can run in order to find arbitrage opportunities.
+- [umlProject.png](/umlProject.png) is a uml diagram of the ArbitrageScraper application.
+- [ArbitrageTradingSite.sql](/ArbitrageTradingSite.sql) is a file that contains how the database was setup. Although I have the database for both applications hosted on godaddy.com so you should not need to run this file to use the application.
+- [ArbitrageTable.png](/ArbitrageTable.png) is a screenshot of the table on the website when it has found a few arbitrage opportunities.
+- [project.pdf](/project.pdf) is the documentation for the project that was submitted to moodle.
 
 ---
 
