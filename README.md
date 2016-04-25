@@ -42,7 +42,7 @@ Once you have both of the on your machine you can get to running the project.
 
 1. Download this repository.
 
-2. The second thing you should do is add this snippet to your context.xml in the conf folder in tomcat. Anywhere in between the <context> tags is fine.
+2. The second thing you should do is add this snippet to your context.xml in the conf folder in tomcat. Anywhere in between the context tags is fine.
   ```xml
   <Resource name="jdbc/ArbitrageTradingSite" auth="Container" type="javax.sql.DataSource"
      maxActive="100" maxIdle="30" maxWait="10000"
