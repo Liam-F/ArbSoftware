@@ -46,7 +46,7 @@ Once you have both of them on your machine you can get to running the project.
   ```xml
   <Resource name="jdbc/ArbitrageTradingSite" auth="Container" type="javax.sql.DataSource"
      maxActive="100" maxIdle="30" maxWait="10000"
-     username="shaneclarke" password="1Thunder1" driverClassName="com.mysql.jdbc.Driver"
+     username="*******" password="*******" driverClassName="com.mysql.jdbc.Driver"
      url="jdbc:mysql://160.153.162.158:3306/ArbitrageTradingSite"/>
   ```
 This is needed in order for the website app to connect to the database.
